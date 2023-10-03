@@ -1,3 +1,20 @@
 @use 'bootstrap';
 
 @use './variables.scss' as *;
+
+// #region debug
+
+.container {
+    // background-color: rgb(210, 105, 30);
+}
+
+.row {
+    // background-color: rgb(0, 0, 255);
+}
+
+div[class^="col"] {
+    // background-color: #ffff00;
+    border: 1px solid red;
+}
+
+// #endregion debug

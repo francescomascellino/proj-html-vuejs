@@ -1,0 +1,37 @@
+@use '../variables.scss' as *;
+
+.av-hero {
+    background-image: url(../assets/img/pagination/homepage-hero-background.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 770px;
+}
+
+.av-ctaBook {
+
+    background-color: $av-txt-secondary !important;
+    color: $av-txt-primary;
+
+    .container .row {
+        height: 45px;
+    }
+}
+
+.av-nav {
+    height: 115px;
+    background-color: $av-nav-bg;
+
+    .navbar-nav {
+
+        * {
+            margin-left: 45px;
+        }
+
+        .nav-link,
+        .av-btn {
+            color: $av-ligh;
+        }
+
+    }
+
+}
