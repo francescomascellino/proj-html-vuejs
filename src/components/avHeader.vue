@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template>
-    <div class="av-hero">
+    <div class="av-hero position-relative">
 
         <div class="av-ctaBook">
 
@@ -34,6 +34,38 @@ export default {
         </div>
 
         <avNav />
+
+        <div class="container av-heroTxtCont">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Drive with Avada</h1>
+                    <h3>We offer the finest driving tuition money can buy</h3>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-1 av-sideShortcuts position-absolute">
+            <div class="demos">
+
+                <div class="outer">
+                </div>
+
+                <div class="middle"></div>
+
+                <div class="icon">
+                    <i class="fa-brands fa-atlassian fa-flip-horizontal"></i>
+                </div>
+
+                <span>Demos</span>
+
+            </div>
+            <div class="discount">
+                <span>$39</span>
+                <span>On Sale</span>
+            </div>
+        </div>
 
     </div>
 </template>

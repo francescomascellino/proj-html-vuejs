@@ -1,18 +1,92 @@
 @use '../variables.scss' as *;
 
-.av-hero {
-    background-image: url(assets/img/pagination/homepage-hero-background.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 770px;
-}
-
 .av-ctaBook {
-
     background-color: $av-txt-secondary !important;
     color: $av-txt-primary;
 
     .container .row {
         height: 45px;
+    }
+}
+
+.av-hero {
+    background-image: url(assets/img/pagination/homepage-hero-background.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 770px;
+    display: flex;
+    flex-direction: column;
+
+    .av-heroTxtCont {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        color: $av-light;
+
+        h1 {
+            font-size: 3.5rem;
+        }
+
+        h3 {
+            font-weight: 400;
+        }
+    }
+
+}
+
+.av-sideShortcuts {
+    width: 5rem;
+    border: 1px solid red;
+    bottom: 66%;
+    left: 100%;
+    transform: translateX(-100%);
+    margin-left: -1rem;
+    margin-bottom: -1rem;
+
+    .demos {
+        background-color: $av-light;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 1/1;
+
+        .outer {
+            height: 3px;
+            background-color: $av-side-links;
+            border: 1px solid white;
+            width: 1.4rem
+        }
+
+        .middle {
+            height: 3px;
+            background-color: $av-side-links;
+            border: 1px solid white;
+            width: 1.7rem
+        }
+
+        .icon {
+            color: $av-light;
+            background-color: $av-side-links;
+            border: 1px solid white;
+            border-radius: 5px;
+            width: 2.2rem;
+            height: 2rem;
+            text-align: center;
+            line-height: 2rem;
+        }
+
+        span {
+            color: $av-side-links;
+            font-weight: bold;
+            font-size: small;
+        }
+
+    }
+
+    .discount {
+        border: 1px solid green;
+
     }
 }
