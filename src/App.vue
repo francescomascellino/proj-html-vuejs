@@ -4,10 +4,13 @@ import { store } from './store.js';
 
 import avHeader from './components/avHeader.vue';
 
+import avMain from './components/avMain.vue';
+
 export default {
 
     components: {
-        avHeader
+        avHeader,
+        avMain
     },
 
     data() {
@@ -25,10 +28,10 @@ export default {
 
 <template>
     <avHeader />
+
+    <avMain />
 </template>
 
 <style lang="scss" scoped>
 @use './assets/scss/style.scss';
-
-@use './assets/scss/partials/avHeader.scss';
 </style>
