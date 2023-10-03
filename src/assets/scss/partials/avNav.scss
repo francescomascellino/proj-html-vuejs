@@ -1,0 +1,28 @@
+@use '../variables.scss' as *;
+
+.av-nav {
+    height: 115px;
+    background-color: $av-nav-bg;
+
+    .navbar-nav {
+
+        min-height: 45px;
+
+        * {
+            margin-left: 45px;
+        }
+
+        .nav-link {
+            padding: 8px 0;
+            color: $av-ligh;
+            border-bottom: 3px solid transparent;
+        }
+
+        .av-active {
+            color: $av-accent;
+            border-bottom: 3px solid $av-accent;
+        }
+
+    }
+
+}
