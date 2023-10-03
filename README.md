@@ -1,2 +1,2 @@
-# Avada Driving School website reproduction with Vua 3/Vite and SCSS
+# Avada Driving School website reproduction with Vu3 3/Vite and SCSS
 
