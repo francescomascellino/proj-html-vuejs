@@ -62,7 +62,7 @@ export default {
 
             </div>
             <div class="discount">
-                <span>$39</span>
+                <h4><span class="currency">$</span>39</h4>
                 <span>On Sale</span>
             </div>
         </div>

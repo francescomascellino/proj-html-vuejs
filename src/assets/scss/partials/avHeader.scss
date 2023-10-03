@@ -35,13 +35,11 @@
 }
 
 .av-sideShortcuts {
-    width: 5rem;
-    border: 1px solid red;
-    bottom: 66%;
+    width: 4.5rem;
+    bottom: 60%;
     left: 100%;
     transform: translateX(-100%);
     margin-left: -1rem;
-    margin-bottom: -1rem;
 
     .demos {
         background-color: $av-light;
@@ -86,7 +84,34 @@
     }
 
     .discount {
-        border: 1px solid green;
+        margin-top: 10px;
+        background-color: $av-light;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 1/1;
+
+        h4 {
+            color: $av-accent;
+            font-size: 1.9rem;
+            font-weight: bolder;
+            margin: 0;
+
+            .currency {
+                vertical-align: super;
+                color: $av-accent;
+                font-weight: bolder;
+            }
+        }
+
+        span {
+            color: $av-side-links;
+            font-weight: 500;
+            font-size: medium;
+        }
+
 
     }
 }
