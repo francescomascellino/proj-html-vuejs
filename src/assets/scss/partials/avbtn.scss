@@ -1,6 +1,7 @@
 @use '../variables.scss' as *;
 
 .av-btn {
+    width: fit-content;
     color: $av-light;
     font-weight: 500;
     text-transform: uppercase;
