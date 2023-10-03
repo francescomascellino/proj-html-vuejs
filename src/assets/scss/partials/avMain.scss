@@ -5,9 +5,10 @@
     height: 100%;
 }
 
+// #region BOOK LESSON
+
 section#av-book {
     color: $av-txt-secondary;
-
     background-color: $av-light;
 
     .av-introduction {
@@ -16,11 +17,14 @@ section#av-book {
         }
 
         p.av-introInfo {
-            font-size: 1.5rem;
+            color: $av-txt-primary;
+            font-size: 1.4rem;
+            line-height: 2.8rem;
         }
 
         p {
-            font-size: 1.125rem;
+            color: $av-txt-primary;
+            font-size: 1rem;
             line-height: 2rem;
         }
 
@@ -30,14 +34,15 @@ section#av-book {
         z-index: 10;
         margin-top: -2rem;
 
-        h2 {
+        h3 {
             color: $av-accent;
         }
 
         p {
             color: $av-txt-primary;
-            font-size: 1.2rem;
-            line-height: 2rem;
+            font-size: 1.3rem;
+            line-height: 2.6rem;
+            font-weight: 600;
         }
 
         input {
@@ -62,24 +67,80 @@ section#av-book {
             margin: 1rem auto 0;
         }
 
-
-
     }
 
 }
+
+// #endregion BOOK LESSON
+
+// #region CALL TO ACTION
 
 .av-ctaCall {
     height: 240px;
     background-image: url('../assets/img/pagination/horizontal-cta-background.jpg');
-
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: $av-light;
 
-    h1 {
-        font-size: 3rem;
+    p {
+        font-size: 1.4rem;
+        font-weight: bold;
     }
 
-    h2 {
-        font-weight: 400;
+    h3 {
+        font-weight: normal;
     }
 
 }
+
+// #endregion CALL TO ACTION
+
+// #region COURSES
+
+section#av-courses {
+    height: 400px;
+    background-image: url('../assets/img/pagination/promise-background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .av-newCourse {
+        margin-top: -1.5rem;
+        background-color: $av-light;
+        background-image: url('../assets/img/pagination/new-corner.jpg');
+        background-position: top left;
+        background-repeat: no-repeat;
+        background-size: 20%;
+        padding: 3.5rem;
+
+        p {
+            color: $av-txt-primary;
+            margin: 2.5rem 0 !important;
+            font-size: 1rem;
+            line-height: 2rem;
+        }
+    }
+
+    .av-course {
+        color: $av-link-accent;
+
+        .av-courseBtn {
+            font-size: small;
+            width: fit-content;
+            color: $av-link-accent;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            border: 3px solid $av-link-accent;
+
+            &:hover {
+                color: $av-accent;
+                border: 3px solid $av-accent;
+            }
+        }
+    }
+}
+
+// #endregion COURSES

@@ -16,6 +16,7 @@ export default {
     <header>
         <div class="av-hero position-relative">
 
+            <!-- CALL TO ACTION -->
             <div class="av-ctaBook">
 
                 <div class="container">
@@ -34,20 +35,24 @@ export default {
 
             </div>
 
+            <!-- NAVBAR -->
             <avNav />
 
+            <!-- TEXT CONTAINER -->
             <div class="container av-heroTxtCont">
                 <div class="row">
                     <div class="col-12">
                         <h1>Drive with Avada</h1>
-                        <h3>We offer the finest driving tuition money can buy</h3>
+                        <p>We offer the finest driving tuition money can buy</p>
                     </div>
 
                 </div>
 
             </div>
 
+            <!-- SIDE SHORTCUTS LABELS -->
             <div class="col-1 av-sideShortcuts position-absolute">
+
                 <div class="demos">
 
                     <div class="outer">
@@ -62,13 +67,18 @@ export default {
                     <span>Demos</span>
 
                 </div>
+
                 <div class="discount">
+
                     <h4><span class="currency">$</span>39</h4>
                     <span>On Sale</span>
+
                 </div>
+
             </div>
 
         </div>
+
     </header>
 </template>
 

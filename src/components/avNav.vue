@@ -16,14 +16,13 @@
 
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
 
-                <div class="navbar-nav">
+                <div class="navbar-nav flex-wrap justify-content-end">
 
-                    <a class="nav-link text-uppercase fw-bold av-active" aria-current="page" href="#">home</a>
-
-                    <a class="nav-link text-uppercase fw-bold" :href="link.path" v-for="link in navLinks">
+                    <a class="nav-link text-uppercase fw-bold" :class="(index == activeLink ? 'av-active' : '')"
+                        @click="turnActive(index)" :href="link.path" v-for="(link, index) in navLinks">
                         {{ link.text }}</a>
 
-                    <avBtn>book now</avBtn>
+                    <avBtn><a href="#av-book" class=" text-decoration-none">book now</a></avBtn>
 
                 </div>
 
@@ -49,6 +48,8 @@ export default {
     data() {
         return {
             Dropdown,
+
+            activeLink: 0,
 
             navLinks: [
                 {
@@ -83,6 +84,13 @@ export default {
             ]
 
         }
+    },
+
+    methods: {
+        turnActive(index) {
+            // ASSEGNA AD "activeLink" IL VALORE DI "index", TRIGGERANDO IL CAMBIO DI CLASSE
+            this.activeLink = index;
+        },
     }
 }
 </script>

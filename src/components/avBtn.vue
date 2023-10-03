@@ -1,9 +1,9 @@
 <template>
-    <a href="#" class="btn rounded-5 av-btn">
+    <button class="btn rounded-5 av-btn">
 
         <slot></slot>
 
-    </a>
+    </button>
 </template>
 
 

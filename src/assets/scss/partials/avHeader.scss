@@ -1,13 +1,6 @@
 @use '../variables.scss' as *;
 
-.av-ctaBook {
-    background-color: $av-txt-secondary !important;
-    color: $av-txt-primary;
-
-    .container .row {
-        height: 45px;
-    }
-}
+// #region HERO
 
 .av-hero {
     background-image: url(../assets/img/pagination/homepage-hero-background.jpg);
@@ -17,22 +10,35 @@
     display: flex;
     flex-direction: column;
 
+    // CALL TO ACTION
+    .av-ctaBook {
+        background-color: $av-txt-secondary !important;
+        color: $av-txt-primary;
+        font-size: small;
+
+        .container .row {
+            height: 45px;
+        }
+    }
+
+    // TEXT CONTAINER
     .av-heroTxtCont {
         flex-grow: 1;
         display: flex;
         align-items: center;
         color: $av-light;
 
-        h1 {
-            font-size: 3.5rem;
-        }
-
-        h3 {
-            font-weight: 400;
+        p {
+            font-size: 1.4rem;
+            font-weight: normal;
         }
     }
 
 }
+
+// #endregion HERO
+
+// #region SIDE SHORTCUTS LABELS
 
 .av-sideShortcuts {
     width: 4.5rem;
@@ -112,6 +118,7 @@
             font-size: medium;
         }
 
-
     }
 }
+
+// #endregion SIDE SHORTCUT LABELS

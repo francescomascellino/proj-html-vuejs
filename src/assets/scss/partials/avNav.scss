@@ -1,26 +1,39 @@
 @use '../variables.scss' as *;
 
 .av-nav {
-    height: 115px;
+    min-height: 115px;
     background-color: $av-nav-bg;
+
+    .navbar-toggler {
+        color: $av-txt-primary;
+        border-color: $av-accent;
+        box-shadow: none;
+    }
 
     .navbar-nav {
 
         min-height: 45px;
 
-        * {
-            margin-left: 45px;
-        }
-
         .nav-link {
             padding: 8px 0;
             color: $av-light;
             border-bottom: 3px solid transparent;
+            margin-left: 2.5rem !important;
         }
 
         .av-active {
             color: $av-accent;
             border-bottom: 3px solid $av-accent;
+        }
+
+        .av-btn {
+            margin-left: 2.5rem !important;
+            margin-bottom: 3px;
+
+            a {
+                color: $av-light;
+                display: inline-block;
+            }
         }
 
     }
