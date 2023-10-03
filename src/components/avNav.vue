@@ -20,15 +20,8 @@
 
                     <a class="nav-link text-uppercase fw-bold av-active" aria-current="page" href="#">home</a>
 
-                    <a class="nav-link text-uppercase fw-bold" href="#">about</a>
-
-                    <a class="nav-link text-uppercase fw-bold" href="#">prices</a>
-
-                    <a class="nav-link text-uppercase fw-bold" href="#">courses</a>
-
-                    <a class="nav-link text-uppercase fw-bold" href="#">locations</a>
-
-                    <a class="nav-link text-uppercase fw-bold" href="#">blog</a>
+                    <a class="nav-link text-uppercase fw-bold" :href="link.path" v-for="link in navLinks">
+                        {{ link.text }}</a>
 
                     <avBtn>book now</avBtn>
 
@@ -56,6 +49,39 @@ export default {
     data() {
         return {
             Dropdown,
+
+            navLinks: [
+                {
+                    text: 'home',
+                    path: '#'
+                },
+
+                {
+                    text: 'about',
+                    path: '#'
+                },
+
+                {
+                    text: 'prices',
+                    path: '#'
+                },
+
+                {
+                    text: 'courses',
+                    path: '#'
+                },
+
+                {
+                    text: 'locations',
+                    path: '#'
+                },
+
+                {
+                    text: 'blog',
+                    path: '#'
+                },
+            ]
+
         }
     }
 }
