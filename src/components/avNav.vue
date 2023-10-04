@@ -19,7 +19,7 @@
                 <div class="navbar-nav flex-wrap justify-content-end">
 
                     <a class="nav-link text-uppercase fw-bold" :class="(index == activeLink ? 'av-active' : '')"
-                        @click="turnActive(index)" :href="link.path" v-for="(link, index) in navLinks">
+                        @click="turnActive(index)" :href="link.path" v-for="(link, index) in this.store.navLinks">
                         {{ link.text }}</a>
 
                     <avBtn><a href="#av-book" class=" text-decoration-none">book now</a></avBtn>
@@ -35,6 +35,8 @@
 
 <script>
 
+import { store } from '../store';
+
 import avBtn from './avBtn.vue';
 
 import { Dropdown } from 'bootstrap';
@@ -49,39 +51,9 @@ export default {
         return {
             Dropdown,
 
-            activeLink: 0,
+            store,
 
-            navLinks: [
-                {
-                    text: 'home',
-                    path: '#'
-                },
-
-                {
-                    text: 'about',
-                    path: '#'
-                },
-
-                {
-                    text: 'prices',
-                    path: '#'
-                },
-
-                {
-                    text: 'courses',
-                    path: '#'
-                },
-
-                {
-                    text: 'locations',
-                    path: '#'
-                },
-
-                {
-                    text: 'blog',
-                    path: '#'
-                },
-            ]
+            activeLink: 0
 
         }
     },

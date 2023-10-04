@@ -1,9 +1,17 @@
 <script>
 
+import { store } from '../store';
+
 import avBtn from './avBtn.vue';
 
 export default {
     name: 'avMain',
+
+    data() {
+        return {
+            store,
+        }
+    },
 
     components: {
         avBtn
@@ -11,7 +19,13 @@ export default {
     methods: {
         avCreateRequest() {
             console.log('FORM SENT');
+        },
+
+        // TRASFORMA IL PERCORSO DELL'IMMAGINE LOCALE IN UN URL
+        getImg(url) {
+            return new URL(`${url}`, import.meta.url).href
         }
+
     }
 }
 
@@ -100,6 +114,8 @@ export default {
         <section id="av-courses">
             <div class="container">
                 <div class="row">
+
+                    <!-- NEW COURSE -->
                     <div class="col-4">
                         <div class="rounded-3 shadow text-center av-newCourse">
                             <h2>Courses</h2>
@@ -110,13 +126,15 @@ export default {
                         </div>
                     </div>
 
-                    <div class="col d-flex flex-column justify-content-center align-items-center">
+                    <!-- COURSES -->
+                    <div class="col d-flex flex-column justify-content-center align-items-center"
+                        v-for="course in this.store.courses">
 
                         <div class="text-center av-course">
 
-                            <img src="../assets/img/courses/sm/courses-passplus-200x200.jpg" alt="">
+                            <img :src="getImg(course.image)" :alt="course.name">
 
-                            <h4 class="pt-3 pb-2">Pass Plus</h4>
+                            <h4 class="pt-3 pb-2">{{ course.name }}</h4>
 
                             <button class="btn rounded-5 av-courseBtn">Learn More</button>
 
@@ -124,33 +142,6 @@ export default {
 
                     </div>
 
-                    <div class="col d-flex flex-column justify-content-center align-items-center">
-
-                        <div class="text-center av-course">
-
-                            <img src="../assets/img/courses/sm/courses-passplus-200x200.jpg" alt="">
-
-                            <h4 class="pt-3 pb-2">Pass Plus</h4>
-
-                            <button class="btn rounded-5 av-courseBtn">Learn More</button>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col d-flex flex-column justify-content-center align-items-center">
-
-                        <div class="text-center av-course">
-
-                            <img src="../assets/img/courses/sm/courses-passplus-200x200.jpg" alt="">
-
-                            <h4 class="pt-3 pb-2">Pass Plus</h4>
-
-                            <button class="btn rounded-5 av-courseBtn">Learn More</button>
-
-                        </div>
-
-                    </div>
                 </div>
             </div>
         </section>
