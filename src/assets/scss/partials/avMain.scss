@@ -207,7 +207,7 @@ section#av-rates {
 
 // #region INSTRUCTORS
 
-#av-instructors {
+section#av-instructors {
 
     h2 {
         line-height: 5rem;
@@ -251,5 +251,16 @@ section#av-rates {
 
 }
 
-
 // #endregion INSTRUCTORS
+
+// #region TESTIMONIALS
+
+section#av-testimonials {
+    height: 865px;
+    margin-top: -6rem;
+    background-image: url('../assets/img/pagination/testimonial-background.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+// #endregion TESTIMONIALS

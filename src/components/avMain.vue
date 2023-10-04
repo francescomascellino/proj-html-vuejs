@@ -238,6 +238,9 @@ export default {
             </div>
 
         </section>
+
+        <!-- SECTION TESTIMONIALS -->
+        <section id="av-testimonials"></section>
     </main>
 </template>
 
