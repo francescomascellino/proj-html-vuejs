@@ -18,7 +18,24 @@ export default {
     },
     methods: {
         avCreateRequest() {
-            console.log('FORM SENT');
+
+            this.store.bookRequest = [];
+
+            const newRequest = {
+                name: this.store.nameForm,
+                email: this.store.emailForm,
+                nummer: this.store.numberForm,
+                location: this.store.locationForm
+            }
+
+            this.store.bookRequest.push(newRequest);
+
+            console.log('FORM SENT', this.store.bookRequest);
+
+            this.store.nameForm = '';
+            this.store.emailForm = '';
+            this.store.numberForm = '';
+            this.store.locationForm = '';
         },
 
         // TRASFORMA IL PERCORSO DELL'IMMAGINE LOCALE IN UN URL
@@ -93,16 +110,16 @@ export default {
                             <p>When you make a block booking with us your first lesson is included free.</p>
 
                             <input class="form-control my-3 " type="text" placeholder="Your Name*" name="av-nameForm"
-                                id="av-nameForm" required>
+                                id="av-nameForm" required v-model="store.nameForm">
 
                             <input class="form-control my-3" type="email" placeholder="Email*" name="av-emailForm"
-                                id="av-emailForm" required>
+                                id="av-emailForm" required v-model="store.emailForm">
 
-                            <input class="form-control my-3" type="number" placeholder="Telephone" name=""
-                                id="av-phoneForm">
+                            <input class="form-control my-3" type="number" placeholder="Telephone" name="" id="av-phoneForm"
+                                v-model="store.numberForm">
 
                             <input class="form-control my-3" type="text" name="av-locationForm" placeholder="Location"
-                                id="av-locationForm">
+                                id="av-locationForm" v-model="store.locationForm">
 
                             <avBtn @click="avCreateRequest()">request a callback</avBtn>
 

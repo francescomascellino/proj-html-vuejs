@@ -40,6 +40,16 @@ export const store = reactive({
         },
     ],
 
+    nameForm: '',
+
+    emailForm: '',
+
+    numberForm: '',
+
+    locationForm: '',
+
+    bookRequest: [],
+
     courses: [
         {
             name: 'Pass Plus',
