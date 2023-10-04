@@ -130,6 +130,24 @@ export const store = reactive({
             quote: 'They got me a first time pass!'
         }
 
+    ],
+
+    blogNews: [
+        {
+            image: '../assets/img/blog/blog-choosecar-700x441.jpg',
+            title: 'what car to start with?',
+            date: 'February 7th, 2019',
+            comments: '0',
+            preview: 'Lorem ipsum, dolor sit amet consectetur adipisicing'
+        },
+
+        {
+            image: '../assets/img/blog/blogpost-10and2-700x441.jpg',
+            title: 'avada driving school expanding',
+            date: 'January 10th, 2019',
+            comments: '3',
+            preview: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
+        }
     ]
 
 })

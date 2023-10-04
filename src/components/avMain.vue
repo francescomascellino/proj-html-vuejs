@@ -314,13 +314,31 @@ export default {
 
                             <div class="rounded-2 text-center av-news">
                                 <h2>Latest News</h2>
+
+                                <div class="av-postContainer d-flex flex-row mt-5">
+                                    <div class="av-post" v-for="post in store.blogNews">
+
+                                        <img :src="getImg(post.image)" :alt="post.title" class="av-blogImg">
+
+                                        <h4 class="text-capitalize mt-4">{{ post.title }}</h4>
+
+                                        <p class="av-blogInfo">{{ post.date }} | <span
+                                                class="av-blogComments">{{ post.comments }}
+                                                Comments</span></p>
+
+                                        <p>{{ post.preview }}</p>
+                                    </div>
+
+                                </div>
+
+                                <avBtn>more from the blog</avBtn>
                             </div>
 
                         </div>
 
                         <div class="av-bottom">
 
-                            <img src="../assets/img/pagination/latestnews-bottom.png" alt="">
+                            <img src="../assets/img/pagination/latestnews-bottom.png" alt="bottom">
 
                         </div>
 

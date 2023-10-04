@@ -327,6 +327,36 @@ section#av-blog {
         .av-news {
             background-color: $av-light;
             padding: 2.5rem;
+
+            .av-postContainer {
+                .av-post {
+                    max-width: 50%;
+                    padding: 1rem;
+
+                    .av-blogImg {
+                        max-width: 100%;
+                    }
+
+                    h4 {
+                        color: $av-accent;
+                    }
+
+                    .av-blogInfo {
+                        color: $av-txt-primary;
+                        font-size: .75rem;
+
+                        .av-blogComments {
+                            color: $av-accent;
+                        }
+                    }
+
+                    p {
+                        color: $av-txt-primary;
+                    }
+
+                }
+            }
+
         }
 
     }
