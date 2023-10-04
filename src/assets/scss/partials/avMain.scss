@@ -5,6 +5,11 @@
     height: 100%;
 }
 
+.av-cardContainer {
+    background-color: $av-accent;
+    padding-top: 5px;
+}
+
 // #region BOOK LESSON
 
 section#av-book {
@@ -144,11 +149,6 @@ section#av-courses {
 }
 
 // #endregion COURSES
-
-.av-cardContainer {
-    background-color: $av-accent;
-    padding-top: 5px;
-}
 
 // #region RATES
 

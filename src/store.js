@@ -11,7 +11,7 @@ export const store = reactive({
 
         {
             text: 'about',
-            path: '#',
+            path: '#av-rates',
             new: false
         },
 
@@ -23,7 +23,7 @@ export const store = reactive({
 
         {
             text: 'courses',
-            path: '#',
+            path: '#av-courses',
             new: true
         },
 
@@ -35,7 +35,7 @@ export const store = reactive({
 
         {
             text: 'blog',
-            path: '#',
+            path: '#av-blog ',
             new: false
         },
     ],

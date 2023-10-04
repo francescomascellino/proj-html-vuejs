@@ -70,8 +70,10 @@ export default {
 
                 <div class="discount">
 
-                    <h4><span class="currency">$</span>39</h4>
-                    <span>On Sale</span>
+                    <a href="#av-courses">
+                        <h4><span class="currency">$</span>39</h4>
+                        <span>On Sale</span>
+                    </a>
 
                 </div>
 
