@@ -149,11 +149,12 @@ export default {
             </div>
         </section>
 
-        <section id="av-rates">
+        <!-- SECTION RATES -->
+        <section id="av-rates" class="mb-5">
 
-            <div class="container mb-5">
+            <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-3" v-for="percentage in this.store.percentages">
+                    <div class="col-4" v-for="percentage in this.store.percentages">
 
                         <!-- CARD "POSTERIORE" VERDE -->
                         <div class="rounded-3 av-cardContainer shadow">
@@ -188,6 +189,55 @@ export default {
 
         </section>
 
+        <!-- SECTION INSTRUCTORS -->
+        <section id="av-instructors">
+            <div class="container">
+
+                <!-- PROMISE -->
+                <div class="row mb-5">
+                    <div class="col flex-grow-1">
+                        <h2>Your Instructors</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, temporibus aliquam.</p>
+                    </div>
+                    <div class="col-4 d-flex align-items-center justify-content-center">
+                        <avBtn>more about us</avBtn>
+                    </div>
+                </div>
+
+                <!-- INSTRUCTORS CARDS -->
+                <div class="row">
+                    <div class="col-4">
+
+                        <!-- CARD "POSTERIORE" VERDE -->
+                        <div class="rounded-3 av-cardContainer shadow">
+
+                            <!-- CARD -->
+                            <div class="d-flex flex-column align-items-center rounded-3 text-center py-4 av-instructorCard">
+
+                                <img src="../assets/img/instructors/instructor-mikehart.jpg" alt="">
+
+                                <h3>Mike Hart</h3>
+
+                                <div class="av-instSocialWrapper">
+
+                                    <a class="px-3" href=""><i class="fa-brands fa-facebook-f"></i></a>
+
+                                    <a class="px-3" href=""><i class="fa-brands fa-twitter"></i></a>
+
+                                    <a class="px-3" href=""><i class="fa-brands fa-instagram"></i></a>
+
+                                </div>
+
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
     </main>
 </template>
 
