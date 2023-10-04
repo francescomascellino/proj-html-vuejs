@@ -52,4 +52,22 @@ export const store = reactive({
 
     ],
 
+    percentages: [
+        {
+            text: 'pass rate',
+            rate: 95
+        },
+
+        {
+            text: 'referral rate',
+            rate: 10
+        },
+
+        {
+            text: 'accident rate',
+            rate: 0
+        }
+
+    ]
+
 })

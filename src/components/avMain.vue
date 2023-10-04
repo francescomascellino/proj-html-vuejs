@@ -66,14 +66,17 @@ export default {
 
                             <p>When you make a block booking with us your first lesson is included free.</p>
 
-                            <input class="form-control my-3 " type="text" placeholder="Your Name*" name="" id="av-nameForm"
-                                required>
+                            <input class="form-control my-3 " type="text" placeholder="Your Name*" name="av-nameForm"
+                                id="av-nameForm" required>
 
-                            <input class="form-control my-3" type="email" placeholder="Email*" name="" id="" required>
+                            <input class="form-control my-3" type="email" placeholder="Email*" name="av-emailForm"
+                                id="av-emailForm" required>
 
-                            <input class="form-control my-3" type="number" placeholder="Telephone" name="" id="">
+                            <input class="form-control my-3" type="number" placeholder="Telephone" name=""
+                                id="av-phoneForm">
 
-                            <input class="form-control my-3" type="text" name="" placeholder="Location" id="">
+                            <input class="form-control my-3" type="text" name="av-locationForm" placeholder="Location"
+                                id="av-locationForm">
 
                             <avBtn @click="avCreateRequest()">request a callback</avBtn>
 
@@ -144,6 +147,45 @@ export default {
 
                 </div>
             </div>
+        </section>
+
+        <section id="av-rates">
+
+            <div class="container mb-5">
+                <div class="row justify-content-center">
+                    <div class="col-3" v-for="percentage in this.store.percentages">
+
+                        <!-- CARD "POSTERIORE" VERDE -->
+                        <div class="rounded-3 av-cardContainer shadow">
+
+                            <!-- CARD -->
+                            <div class="d-flex flex-column align-items-center rounded-3 py-4 av-rateCard">
+
+                                <!-- CERCHIO PERCENTUALE -->
+                                <div class="av-rateCircle">
+
+                                    <svg viewBox="0 0 36 36" class="av-perCircle">
+                                        <path class="av-circleBg"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <!-- stroke-dasharray = PERCENTUALE - strke = COLORE -->
+                                        <path class="av-circleBorder" :stroke-dasharray="`${percentage.rate}, 100`"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                                            stroke="#7abc64" />
+                                        <text x="18" y="22" class="av-percentage">{{ percentage.rate }}%</text>
+                                    </svg>
+
+                                </div>
+
+                                <p class="text-uppercase mt-3">{{ percentage.text }}</p>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
         </section>
 
     </main>

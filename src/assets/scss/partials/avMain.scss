@@ -99,9 +99,9 @@ section#av-book {
 // #region COURSES
 
 section#av-courses {
-    height: 400px;
+    height: 495px;
     background-image: url('../assets/img/pagination/promise-background.jpg');
-    background-position: center;
+    background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -144,3 +144,63 @@ section#av-courses {
 }
 
 // #endregion COURSES
+
+// #region RATES
+
+section#av-rates {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none" fill="rgba(138,154,173,0.2)"><path d="M-1 -1 L50 99 L101 -1 Z"></path></svg>');
+
+    .av-cardContainer {
+        background-color: $av-accent;
+        padding-top: 5px;
+
+        .av-rateCard {
+            background-color: $av-light;
+
+            p {
+                color: $av-txt-primary;
+                font-size: 0.9em;
+                font-weight: bold;
+            }
+        }
+    }
+
+}
+
+// #endregion RATES
+
+// #region PERCENTAGE CIRCLE
+
+.av-rateCircle {
+    width: 70%;
+}
+
+.av-perCircle {}
+
+.av-circleBg {
+    fill: none;
+    stroke: $av-medium;
+    stroke-width: 1.5;
+}
+
+.av-circleBorder {
+    fill: none;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+}
+
+.av-percentage {
+    fill: $av-txt-primary;
+    font-size: 0.6rem;
+    text-anchor: middle;
+}
+
+
+@keyframes progress {
+    0% {
+        stroke-dasharray: 0 100;
+    }
+}
+
+// #endregion PERCENTAGE CIRCLE
