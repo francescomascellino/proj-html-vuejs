@@ -216,8 +216,7 @@ export default {
 
         </section>
 
-        <!-- SECTION INSTRUCTORS -->
-
+        <!-- SECTION ISTRUCTORS -->
         <section id="av-instructors">
 
             <div class="container">
@@ -233,10 +232,9 @@ export default {
                     </div>
                 </div>
 
-                <!-- INSTRUCTORS CARDS -->
-
                 <div class="row">
 
+                    <!-- INSTRUCTORS CARDS -->
                     <div class="col-4" v-for="Instructor in store.instructors">
 
                         <!-- CARD "POSTERIORE" VERDE -->
@@ -345,6 +343,29 @@ export default {
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!-- SECTION NEWSLETTER -->
+        <section id="av-newsletter">
+
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-6 d-flex flex-column justify-content-center align-items-lg-center">
+                        <h3>Sign up to our Newsletter</h3>
+
+                        <input class="form-control my-4" type="email" placeholder="Enter your email to subscribe*"
+                            name="av-subcribe" id="av-subcribe" required>
+
+                        <avBtn>subscribe</avBtn>
+
+                        <p class="mt-4">(We do not share your data with anybody, and only use it for its intended purpose)
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+
         </section>
     </main>
 </template>

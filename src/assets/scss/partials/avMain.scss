@@ -256,7 +256,7 @@ section#av-instructors {
 // #region TESTIMONIALS
 
 section#av-testimonials {
-    height: 865px;
+    height: 900px;
     margin-top: -6rem;
     background-image: url('../assets/img/pagination/testimonial-background.jpg');
     background-position: center;
@@ -372,3 +372,23 @@ section#av-blog {
 }
 
 // #endregion BLOG
+
+// #region NEWSLETTER
+
+section#av-newsletter {
+    height: 390px;
+    background-image: url('../assets/img/pagination/newsletter_background.jpg');
+    background-position: center;
+    background-size: cover;
+
+    .av-btn {
+        width: 100%;
+    }
+
+    p {
+        font-size: .75rem;
+        color: $av-txt-primary
+    }
+}
+
+//#endregion NEWSLETTER
