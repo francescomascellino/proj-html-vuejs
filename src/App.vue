@@ -6,11 +6,14 @@ import avHeader from './components/avHeader.vue';
 
 import avMain from './components/avMain.vue';
 
+import avFooter from './components/avFooter.vue';
+
 export default {
 
     components: {
         avHeader,
-        avMain
+        avMain,
+        avFooter
     },
 
     data() {
@@ -21,7 +24,6 @@ export default {
         }
     },
 
-
 }
 
 </script>
@@ -30,6 +32,8 @@ export default {
     <avHeader />
 
     <avMain />
+
+    <avFooter />
 </template>
 
 <style lang="scss" scoped>
