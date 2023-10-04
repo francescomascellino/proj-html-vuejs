@@ -68,6 +68,27 @@ export const store = reactive({
             rate: 0
         }
 
+    ],
+
+    instructors: [
+        {
+            name: 'Mike Hart',
+            image: '../assets/img/instructors/instructor-mikehart.jpg',
+            presentation: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'
+        },
+
+        {
+            name: 'John Smith',
+            image: '../assets/img/instructors/instructor-johnsmith.jpg',
+            presentation: 'Lorem ipsum dolor sit amet, consectetur adipisicing  adipisicing  adipisicing elit. Lorem ipsum dolor sit amet'
+        },
+
+        {
+            name: 'Angela Hart',
+            image: '../assets/img/instructors/instructor-angelahart.jpg',
+            presentation: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'
+        },
+
     ]
 
 })

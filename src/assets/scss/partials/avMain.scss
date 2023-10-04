@@ -225,13 +225,14 @@ section#av-rates {
 
     .av-instructorCard {
         background-color: $av-light;
-        padding: 3rem;
+        padding-bottom: 1.5rem !important;
+        padding-left: 3rem;
+        padding-right: 3rem;
 
         img {
             margin-top: 1rem;
             margin-bottom: 2rem;
             width: 100%;
-            // height: 100%;
         }
 
         a {

@@ -206,7 +206,7 @@ export default {
 
                 <!-- INSTRUCTORS CARDS -->
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-4" v-for="Instructor in store.instructors">
 
                         <!-- CARD "POSTERIORE" VERDE -->
                         <div class="rounded-3 av-cardContainer shadow">
@@ -214,9 +214,9 @@ export default {
                             <!-- CARD -->
                             <div class="d-flex flex-column align-items-center rounded-3 text-center py-4 av-instructorCard">
 
-                                <img src="../assets/img/instructors/instructor-mikehart.jpg" alt="">
+                                <img :src="getImg(Instructor.image)" alt="">
 
-                                <h3>Mike Hart</h3>
+                                <h3>{{ Instructor.name }}</h3>
 
                                 <div class="av-instSocialWrapper">
 
@@ -228,7 +228,7 @@ export default {
 
                                 </div>
 
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <p>{{ Instructor.presentation }}</p>
 
                             </div>
                         </div>
