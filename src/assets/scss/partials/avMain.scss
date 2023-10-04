@@ -308,3 +308,37 @@ section#av-testimonials {
 } */
 
 // #endregion TESTIMONIALS
+
+// #region BLOG
+
+section#av-blog {
+
+    height: 870px;
+    margin-top: -6rem;
+    background-image: url('../assets/img/pagination/latestnews-background.jpg');
+    background-position: bottom center;
+    background-size: cover;
+
+    .av-cardContainer {
+        background-color: $av-link-accent;
+        padding-top: 5px;
+        margin-top: -2rem;
+
+        .av-news {
+            background-color: $av-light;
+            padding: 2.5rem;
+        }
+
+    }
+
+    .av-bottom {
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+    }
+
+}
+
+// #endregion BLOG

@@ -141,6 +141,7 @@ export default {
 
         <!-- SECTION COURSES -->
         <section id="av-courses">
+
             <div class="container">
                 <div class="row">
 
@@ -216,7 +217,9 @@ export default {
         </section>
 
         <!-- SECTION INSTRUCTORS -->
+
         <section id="av-instructors">
+
             <div class="container">
 
                 <!-- PROMISE -->
@@ -231,7 +234,9 @@ export default {
                 </div>
 
                 <!-- INSTRUCTORS CARDS -->
+
                 <div class="row">
+
                     <div class="col-4" v-for="Instructor in store.instructors">
 
                         <!-- CARD "POSTERIORE" VERDE -->
@@ -260,7 +265,9 @@ export default {
                         </div>
 
                     </div>
+
                 </div>
+
             </div>
 
         </section>
@@ -292,6 +299,31 @@ export default {
                                 :class="index == this.store.activeTestimonial ? 'fa-solid fa-circle' : 'fa-regular fa-circle'"
                                 @click="changeActiveTestimonial(index)"></i>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION BLOG -->
+        <section id="av-blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+
+                        <div class="rounded-2 shadow av-cardContainer">
+
+                            <div class="rounded-2 text-center av-news">
+                                <h2>Latest News</h2>
+                            </div>
+
+                        </div>
+
+                        <div class="av-bottom">
+
+                            <img src="../assets/img/pagination/latestnews-bottom.png" alt="">
+
+                        </div>
+
                     </div>
                 </div>
             </div>
