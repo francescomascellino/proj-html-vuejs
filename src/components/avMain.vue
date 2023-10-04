@@ -24,9 +24,32 @@ export default {
         // TRASFORMA IL PERCORSO DELL'IMMAGINE LOCALE IN UN URL
         getImg(url) {
             return new URL(`${url}`, import.meta.url).href
-        }
+        },
+
+        // LOOP DEI TESTIMONIALS
+
+        avLoop() {
+
+            this.autoplay = setInterval(() => {
+
+                store.activeTestimonial++;
+                if (store.activeTestimonial > store.testimonials.length - 1) {
+                    store.activeTestimonial = 0;
+                }
+
+            }, 3000);
+
+        },
+
+    },
+
+    mounted() {
+
+        // ROTAZIONE DEI TESTIMONIALS DOPO 3 SECONDI
+        setTimeout(this.avLoop(), 3000);
 
     }
+
 }
 
 </script>
@@ -240,7 +263,24 @@ export default {
         </section>
 
         <!-- SECTION TESTIMONIALS -->
-        <section id="av-testimonials"></section>
+        <section id="av-testimonials">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col av-testSlider">
+                        <h1>TESTIMONIALS SLIDER TEST</h1>
+                        <div class="av-testPagination">
+
+                            <div class="av-testimonial">
+                                <img :src="getImg(store.testimonials[store.activeTestimonial].image)" alt="">
+                            </div>
+
+                            <i v-for="(testimonial, index) in store.testimonials" :id="index"
+                                :class="index == this.store.activeTestimonial ? 'fa-solid fa-circle' : 'fa-regular fa-circle'"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 </template>
 
