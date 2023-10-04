@@ -27,7 +27,6 @@ export default {
         },
 
         // LOOP DEI TESTIMONIALS
-
         avLoop() {
 
             this.autoplay = setInterval(() => {
@@ -37,7 +36,7 @@ export default {
                     store.activeTestimonial = 0;
                 }
 
-            }, 3000);
+            }, 5000);
 
         },
 
@@ -46,7 +45,7 @@ export default {
     mounted() {
 
         // ROTAZIONE DEI TESTIMONIALS DOPO 3 SECONDI
-        setTimeout(this.avLoop(), 3000);
+        setTimeout(this.avLoop(), 5000);
 
     }
 
@@ -266,15 +265,23 @@ export default {
         <section id="av-testimonials">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col av-testSlider">
-                        <h1>TESTIMONIALS SLIDER TEST</h1>
+                    <div class="col text-center av-testSlider">
+
+                        <h2>Testimonials</h2>
+                        <p>Here's what our happy drivers had to say about our services:</p>
+
                         <div class="av-testPagination">
 
-                            <div class="av-testimonial">
-                                <img :src="getImg(store.testimonials[store.activeTestimonial].image)" alt="">
+                            <div class="py-4 av-testimonial">
+                                <img :src="getImg(store.testimonials[store.activeTestimonial].image)"
+                                    :alt="store.testimonials[store.activeTestimonial].name" class="av-appearing">
                             </div>
 
-                            <i v-for="(testimonial, index) in store.testimonials" :id="index"
+                            <blockquote>{{ store.testimonials[store.activeTestimonial].quote }}</blockquote>
+
+                            <p class="fw-bold">{{ store.testimonials[store.activeTestimonial].name }}</p>
+
+                            <i v-for="( testimonial, index ) in  store.testimonials " :id="index" class="px-2"
                                 :class="index == this.store.activeTestimonial ? 'fa-solid fa-circle' : 'fa-regular fa-circle'"></i>
                         </div>
                     </div>

@@ -109,7 +109,7 @@ export const store = reactive({
         {
             name: 'Harold Jones',
             image: '../assets/img/testimonials/testimonial-harold.png',
-            quote: 'Avada Driving School really helped build my confidence behind the wheel and with driving in general, and they got me a first time pass! Highly recommended.'
+            quote: 'Avada Driving School is highly recommended!'
         },
 
         {
@@ -121,7 +121,7 @@ export const store = reactive({
         {
             name: 'Kelly Jones',
             image: '../assets/img/testimonials/testimonial-kelly.png',
-            quote: 'Avada Driving School really helped build my confidence behind the wheel and with driving in general, and they got me a first time pass! Highly recommended.'
+            quote: 'They got me a first time pass!'
         }
 
     ]

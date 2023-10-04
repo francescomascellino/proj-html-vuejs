@@ -261,6 +261,39 @@ section#av-testimonials {
     background-image: url('../assets/img/pagination/testimonial-background.jpg');
     background-position: center;
     background-size: cover;
+
+    .av-appearing {
+        width: 150px;
+        aspect-ratio: 1/1;
+        animation: av-fadeIn ease 5s;
+        animation-iteration-count: infinite;
+    }
+
+    blockquote {
+        color: $av-txt-primary;
+        font-size: 1rem;
+        line-height: 2rem;
+        width: 40%;
+        height: 128px;
+        margin: 0 auto;
+    }
+
+    p {
+        color: $av-txt-primary;
+        font-size: 1.2rem;
+        line-height: 2.84em;
+    }
+
+}
+
+@keyframes av-fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 // #endregion TESTIMONIALS
