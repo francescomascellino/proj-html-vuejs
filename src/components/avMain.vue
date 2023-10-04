@@ -26,6 +26,10 @@ export default {
             return new URL(`${url}`, import.meta.url).href
         },
 
+        changeActiveTestimonial(index) {
+            this.store.activeTestimonial = index;
+        },
+
         // LOOP DEI TESTIMONIALS
         avLoop() {
 
@@ -277,12 +281,16 @@ export default {
                                     :alt="store.testimonials[store.activeTestimonial].name" class="av-appearing">
                             </div>
 
-                            <blockquote>{{ store.testimonials[store.activeTestimonial].quote }}</blockquote>
+                            <div class="d-flex align-items-center justify-content-center av-testQuote">
+                                <p>{{ store.testimonials[store.activeTestimonial].quote }}</p>
+                            </div>
+
 
                             <p class="fw-bold">{{ store.testimonials[store.activeTestimonial].name }}</p>
 
                             <i v-for="( testimonial, index ) in  store.testimonials " :id="index" class="px-2"
-                                :class="index == this.store.activeTestimonial ? 'fa-solid fa-circle' : 'fa-regular fa-circle'"></i>
+                                :class="index == this.store.activeTestimonial ? 'fa-solid fa-circle' : 'fa-regular fa-circle'"
+                                @click="changeActiveTestimonial(index)"></i>
                         </div>
                     </div>
                 </div>

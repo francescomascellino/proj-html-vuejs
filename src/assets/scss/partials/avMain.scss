@@ -265,17 +265,22 @@ section#av-testimonials {
     .av-appearing {
         width: 150px;
         aspect-ratio: 1/1;
-        animation: av-fadeIn ease 5s;
-        animation-iteration-count: infinite;
+        // animation: av-fadeIn ease 5s;
+        // animation-iteration-count: infinite;
     }
 
-    blockquote {
-        color: $av-txt-primary;
-        font-size: 1rem;
-        line-height: 2rem;
+    .av-testQuote {
+
         width: 40%;
         height: 128px;
         margin: 0 auto;
+
+        p {
+            color: $av-txt-primary;
+            font-size: 1rem;
+            line-height: 2rem;
+        }
+
     }
 
     p {
@@ -284,9 +289,15 @@ section#av-testimonials {
         line-height: 2.84em;
     }
 
+    i {
+        color: $av-txt-primary;
+        font-size: 0.75rem;
+        cursor: pointer;
+    }
+
 }
 
-@keyframes av-fadeIn {
+/* @keyframes av-fadeIn {
     0% {
         opacity: 0;
     }
@@ -294,6 +305,6 @@ section#av-testimonials {
     100% {
         opacity: 1;
     }
-}
+} */
 
 // #endregion TESTIMONIALS

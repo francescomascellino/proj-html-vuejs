@@ -20,7 +20,8 @@
 
                     <a class="nav-link text-uppercase fw-bold" :class="(index == activeLink ? 'av-active' : '')"
                         @click="turnActive(index)" :href="link.path" v-for="(link, index) in this.store.navLinks">
-                        {{ link.text }}</a>
+                        {{ link.text }} <span v-if="link.new" class="badge">New</span></a>
+
 
                     <avBtn><a href="#av-book" class=" text-decoration-none">book now</a></avBtn>
 

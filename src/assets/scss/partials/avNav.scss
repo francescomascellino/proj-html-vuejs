@@ -21,6 +21,14 @@
             margin-left: 2.5rem !important;
         }
 
+        .badge {
+            color: $av-light;
+            font-size: x-small;
+            background-color: $av-accent;
+            vertical-align: middle;
+            margin-bottom: 3px;
+        }
+
         .av-active {
             color: $av-accent;
             border-bottom: 3px solid $av-accent;

@@ -5,32 +5,38 @@ export const store = reactive({
     navLinks: [
         {
             text: 'home',
-            path: '#'
+            path: '#',
+            new: false
         },
 
         {
             text: 'about',
-            path: '#'
+            path: '#',
+            new: false
         },
 
         {
             text: 'prices',
-            path: '#'
+            path: '#',
+            new: false
         },
 
         {
             text: 'courses',
-            path: '#'
+            path: '#',
+            new: true
         },
 
         {
             text: 'locations',
-            path: '#'
+            path: '#',
+            new: false
         },
 
         {
             text: 'blog',
-            path: '#'
+            path: '#',
+            new: false
         },
     ],
 
