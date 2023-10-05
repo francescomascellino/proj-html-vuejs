@@ -23,7 +23,7 @@
 
                         <h5 class="mb-3">CONTACT DETAILS</h5>
 
-                        <div class="d-flex mb-3 av-contactWrapper" v-for="contact in this.store.footerContacts">
+                        <div class="d-flex mb-3 av-contactWrapper" v-for="contact in contacts">
 
                             <div class="ms-1 me-3 av-contactIco">
                                 <i :class="contact.icon"></i>
@@ -46,7 +46,7 @@
                     <div class="col-2 p-0">
                         <h5 class="mb-3">COURSES</h5>
 
-                        <div class="d-flex mb-3 av-coursesLinktWrapper" v-for="course in this.store.footerCourses">
+                        <div class="d-flex mb-3 av-coursesLinktWrapper" v-for="course in courses">
 
                             <div class="ms-1 me-3 av-courseLinktIco">
                                 <i class="fa-regular fa-circle-right"></i>
@@ -110,8 +110,6 @@
 
 <script>
 
-import { store } from '../store';
-
 import avBtn from './avBtn.vue';
 
 export default {
@@ -122,11 +120,14 @@ export default {
         avBtn
     },
 
-    data() {
-        return {
-            store,
-        }
+    // PROPS DECLARATION
+    props: {
+
+        contacts: "Object",
+        courses: 'Objects'
+
     },
+
 }
 
 

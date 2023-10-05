@@ -36,7 +36,7 @@ export default {
 
     <avMain />
 
-    <avFooter />
+    <avFooter :contacts="store.footerContacts" :courses="store.footerCourses" />
 </template>
 
 <style lang="scss" scoped>

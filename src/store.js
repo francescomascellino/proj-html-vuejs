@@ -163,6 +163,7 @@ export const store = reactive({
         }
     ],
 
+    // FOOTER
     footerContacts: [
         {
             icon: 'fa-solid fa-house-chimney',

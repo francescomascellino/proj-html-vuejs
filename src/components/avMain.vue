@@ -85,7 +85,7 @@ export default {
 
             <div class="container mb-5">
 
-                <div class="row row-cols-1 row-cols-md-1 row-cols-lg-2">
+                <div class="row">
 
                     <!-- INFO SECTION -->
                     <div class="col d-flex flex-column justify-content-center my-5 av-introduction">
