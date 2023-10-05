@@ -39,11 +39,16 @@
                             <input class="form-control my-3" type="email" placeholder="Email*" name="av-emailForm"
                                 id="av-emailForm" required v-model="store.emailForm">
 
-                            <input class="form-control my-3" type="number" placeholder="Telephone" name="" id="av-phoneForm"
-                                v-model="store.numberForm">
+                            <input class="form-control my-3" type="number" placeholder="Telephone" name="av-phoneForm"
+                                id="av-phoneForm" v-model="store.numberForm">
 
                             <input class="form-control my-3" type="text" name="av-locationForm" placeholder="Location"
                                 id="av-locationForm" v-model="store.locationForm">
+
+                            <div class="av-formError">
+                                <p class="av-formError" v-if="store.formError">Some fields are compiled incorrectly</p>
+                            </div>
+
 
                             <avBtn @click="avCreateRequest()">request a callback</avBtn>
 
@@ -346,23 +351,33 @@ export default {
         // CREATES OBJECT WITH CONTACT DETAILS THAT CAN BE HANDLED TO RECEIVE A BOOK REQUEST
         avCreateRequest() {
 
-            this.store.bookRequest = [];
+            if (this.store.numberForm.length == 0 || this.store.emailForm.length == 0 || this.store.numberForm.length == 0 || this.store.locationForm.length == 0) {
+                this.store.formError = true;
+                console.log("EMPTY FIELDS");
+            } else {
 
-            const newRequest = {
-                name: this.store.nameForm,
-                email: this.store.emailForm,
-                nummer: this.store.numberForm,
-                location: this.store.locationForm
+                this.store.formError = false;
+
+                this.store.bookRequest = [];
+
+                const newRequest = {
+                    name: this.store.nameForm,
+                    email: this.store.emailForm,
+                    nummer: this.store.numberForm,
+                    location: this.store.locationForm
+                }
+
+                this.store.bookRequest.push(newRequest);
+
+                console.log('FORM SENT', this.store.bookRequest);
+
+                this.store.nameForm = '';
+                this.store.emailForm = '';
+                this.store.numberForm = '';
+                this.store.locationForm = '';
+
             }
 
-            this.store.bookRequest.push(newRequest);
-
-            console.log('FORM SENT', this.store.bookRequest);
-
-            this.store.nameForm = '';
-            this.store.emailForm = '';
-            this.store.numberForm = '';
-            this.store.locationForm = '';
         },
 
         // TRANSFORMS IMAGE PATH TO URL

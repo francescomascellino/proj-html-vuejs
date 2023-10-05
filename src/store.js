@@ -50,6 +50,8 @@ export const store = reactive({
 
     locationForm: '',
 
+    formError: false,
+
     bookRequest: [],
 
     // OBJECTS FOR LIST RENDERING
