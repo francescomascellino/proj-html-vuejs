@@ -158,6 +158,56 @@ export const store = reactive({
             comments: '3',
             preview: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
         }
+    ],
+
+    footerContacts: [
+        {
+            icon: 'fa-solid fa-house-chimney',
+            text: '12345, Noth Main Street, New York, NY 555555'
+        },
+
+        {
+            icon: 'fa-solid fa-phone-flip',
+            text: '1.800.555.67789'
+        },
+
+        {
+            icon: 'fa-regular fa-envelope',
+            email: 'info@your-domain.com'
+        },
+
+        {
+            icon: 'fa-solid fa-link',
+
+            link: {
+                name: 'Theme-Fusion.com',
+                url: '#'
+            }
+
+        },
+
+    ],
+
+    footerCourses: [
+        {
+            name: 'Pass Plus',
+            link: '#av-courses'
+        },
+
+        {
+            name: 'Intensive Course',
+            link: '#av-courses'
+        },
+
+        {
+            name: 'Automatic',
+            link: '#av-courses'
+        },
+
+        {
+            name: 'Instructor Training',
+            link: '#av-courses'
+        }
     ]
 
 })

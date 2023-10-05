@@ -1,5 +1,7 @@
 <template>
     <footer>
+
+        <!-- CONTACTS -->
         <section id="av-contacts">
 
             <div class="container d-flex align-items-lg-center">
@@ -19,31 +21,20 @@
 
                         <h5 class="mb-3">CONTACT DETAILS</h5>
 
-                        <div class="d-flex mb-3 av-contactWrapper">
-                            <div class="ms-1 me-3 av-contactIco"><i class="fa-solid fa-house-chimney"></i></div>
-                            <div class="av-contact">
-                                <p>12345, Noth Main Street, New York, NY 555555</p>
-                            </div>
-                        </div>
+                        <div class="d-flex mb-3 av-contactWrapper" v-for="contact in this.store.footerContacts">
 
-                        <div class="d-flex mb-3 av-contactWrapper">
-                            <div class="ms-1 me-3 av-contactIco"><i class="fa-solid fa-house-chimney"></i></div>
-                            <div class="av-contact">
-                                <p>12345, Noth Main Street</p>
+                            <div class="ms-1 me-3 av-contactIco">
+                                <i :class="contact.icon"></i>
                             </div>
-                        </div>
 
-                        <div class="d-flex mb-3 av-contactWrapper">
-                            <div class="ms-1 me-3 av-contactIco"><i class="fa-solid fa-house-chimney"></i></div>
                             <div class="av-contact">
-                                <p>12345, Noth Main Street</p>
-                            </div>
-                        </div>
 
-                        <div class="d-flex mb-3 av-contactWrapper">
-                            <div class="ms-1 me-3 av-contactIco"><i class="fa-solid fa-house-chimney"></i></div>
-                            <div class="av-contact">
-                                <p>12345, Noth Main Street</p>
+                                <p v-if="contact.text">{{ contact.text }}</p>
+
+                                <a v-if="contact.email" :href="'mailto:{{contact.email}}'">{{ contact.email }}</a>
+
+                                <a v-if="contact.link" :href="contact.link.url">{{ contact.link.name }}</a>
+
                             </div>
                         </div>
 
@@ -52,38 +43,25 @@
                     <div class="col-2 p-0">
                         <h5 class="mb-3">COURSES</h5>
 
-                        <div class="d-flex mb-3 av-coursesLinktWrapper">
-                            <div class="ms-1 me-3 av-courseLinktIco"><i class="fa-regular fa-circle-right"></i></div>
-                            <div class="av-courseLink">
-                                <p>Pass Plus</p>
-                            </div>
-                        </div>
+                        <div class="d-flex mb-3 av-coursesLinktWrapper" v-for="course in this.store.footerCourses">
 
-                        <div class="d-flex mb-3 av-coursesLinktWrapper">
-                            <div class="ms-1 me-3 av-courseLinktIco"><i class="fa-regular fa-circle-right"></i></div>
-                            <div class="av-courseLink">
-                                <p>Pass Plus</p>
+                            <div class="ms-1 me-3 av-courseLinktIco">
+                                <i class="fa-regular fa-circle-right"></i>
                             </div>
-                        </div>
 
-                        <div class="d-flex mb-3 av-coursesLinktWrapper">
-                            <div class="ms-1 me-3 av-courseLinktIco"><i class="fa-regular fa-circle-right"></i></div>
                             <div class="av-courseLink">
-                                <p>Pass Plus</p>
-                            </div>
-                        </div>
-
-                        <div class="d-flex mb-3 av-coursesLinktWrapper">
-                            <div class="ms-1 me-3 av-courseLinktIco"><i class="fa-regular fa-circle-right"></i></div>
-                            <div class="av-courseLink">
-                                <p>Pass Plus</p>
+                                <a :href="course.link">{{ course.name }}</a>
                             </div>
                         </div>
 
                     </div>
 
                     <div class="col-3 text-center av-offers">
-                        <img src="../assets/img/labels/adGrid.png" alt="ad" class="mb-4 av-adLabels">
+
+                        <a href="#av-rates">
+                            <img src="../assets/img/labels/adGrid.png" alt="ad" class="mb-4 av-adLabels">
+                        </a>
+
                         <avBtn><a href="#av-book">book now</a></avBtn>
                     </div>
 
@@ -121,11 +99,12 @@
 
         </section>
 
-
     </footer>
 </template>
 
 <script>
+
+import { store } from '../store';
 
 import avBtn from './avBtn.vue';
 
@@ -137,13 +116,14 @@ export default {
         avBtn
     },
 
-    methods: {
-        getImg(url) {
-            return new URL(`${url}`, import.meta.url).href
+    data() {
+        return {
+            store,
         }
-    }
-
+    },
 }
+
+
 </script>
 
 <style lang="scss" scoped>

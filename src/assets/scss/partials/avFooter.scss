@@ -29,10 +29,12 @@ footer {
         // CONTACTS
         .av-contactWrapper {
 
-            p {
+            p,
+            a {
                 margin: 0;
                 font-size: 14px;
                 line-height: 28px;
+                color: $av-txt-primary;
             }
 
             i {
@@ -44,7 +46,7 @@ footer {
         // COURSES
         .av-coursesLinktWrapper {
 
-            p,
+            a,
             i {
                 margin: 0;
                 font-size: 1.125rem;
