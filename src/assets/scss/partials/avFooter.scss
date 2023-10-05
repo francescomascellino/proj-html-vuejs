@@ -2,8 +2,9 @@
 
 footer {
 
-    .container {
-        border: 1px solid red;
+    .container,
+    .row {
+        height: 100%;
     }
 
     height: 580px;
@@ -13,6 +14,9 @@ footer {
 
     #av-contacts {
         height: 100%;
+
+
+
     }
 
     #av-legal {

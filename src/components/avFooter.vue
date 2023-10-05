@@ -2,11 +2,32 @@
     <footer>
         <section id="av-contacts">
 
-            <div class="container">
+            <div class="container ">
 
-                <div class="row">
+                <div class="row align-items-center">
+
                     <div class="col">
-                        <h1>TOP</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, enim iure dolorem minus a,
+                            velit odio aspernatur quas quibusdam repudiandae aliquam? Veniam architecto neque earum
+                            perspiciatis quidem nobis culpa sint?</p>
+                    </div>
+
+                    <div class="col">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, enim iure dolorem minus a,
+                            velit odio aspernatur quas quibusdam repudiandae aliquam? Veniam architecto neque earum
+                            perspiciatis quidem nobis culpa sint?</p>
+                    </div>
+
+                    <div class="col">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, enim iure dolorem minus a,
+                            velit odio aspernatur quas quibusdam repudiandae aliquam? Veniam architecto neque earum
+                            perspiciatis quidem nobis culpa sint?</p>
+                    </div>
+
+                    <div class="col">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, enim iure dolorem minus a,
+                            velit odio aspernatur quas quibusdam repudiandae aliquam? Veniam architecto neque earum
+                            perspiciatis quidem nobis culpa sint?</p>
                     </div>
                 </div>
 
@@ -18,9 +39,10 @@
 
             <div class="container">
 
-                <div class="row">
-                    <div class="col">
-                        <h1>BOTTOM</h1>
+                <div class="row align-items-center">
+                    <div class="col d-flex flex-row justify-content-between">
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
                     </div>
                 </div>
 
