@@ -37,12 +37,15 @@
 
 <script>
 
+// IMPORT COMPONENTS
 import avBtn from './avBtn.vue';
 
 import { Dropdown } from 'bootstrap';
 
 export default {
     name: 'avNav',
+
+    // COMPONENTS DECLARATION
     components: {
         avBtn
     },

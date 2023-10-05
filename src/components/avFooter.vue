@@ -110,12 +110,14 @@
 
 <script>
 
+// IMPORT COMPONENTS
 import avBtn from './avBtn.vue';
 
 export default {
 
     name: 'avFooter',
 
+    // COMPONENTS DECLARATION
     components: {
         avBtn
     },

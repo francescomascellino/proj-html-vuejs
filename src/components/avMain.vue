@@ -1,82 +1,3 @@
-<script>
-
-import { store } from '../store';
-
-import avBtn from './avBtn.vue';
-
-export default {
-    name: 'avMain',
-
-    data() {
-        return {
-            store,
-        }
-    },
-
-    components: {
-        avBtn
-    },
-
-    methods: {
-
-        // CREATES OBJECT WITH CONTACT DETAILS THAT CAN BE HANDLED TO RECEIVE A BOOK REQUEST
-        avCreateRequest() {
-
-            this.store.bookRequest = [];
-
-            const newRequest = {
-                name: this.store.nameForm,
-                email: this.store.emailForm,
-                nummer: this.store.numberForm,
-                location: this.store.locationForm
-            }
-
-            this.store.bookRequest.push(newRequest);
-
-            console.log('FORM SENT', this.store.bookRequest);
-
-            this.store.nameForm = '';
-            this.store.emailForm = '';
-            this.store.numberForm = '';
-            this.store.locationForm = '';
-        },
-
-        // TRANSFORMS IMAGE PATH TO URL
-        getImg(url) {
-            return new URL(`${url}`, import.meta.url).href
-        },
-
-        changeActiveTestimonial(index) {
-            this.store.activeTestimonial = index;
-        },
-
-        // TESTIMONIALS SLIDER LOOP
-        avLoop() {
-
-            this.autoplay = setInterval(() => {
-
-                store.activeTestimonial++;
-                if (store.activeTestimonial > store.testimonials.length - 1) {
-                    store.activeTestimonial = 0;
-                }
-
-            }, 5000);
-
-        },
-
-    },
-
-    mounted() {
-
-        // STARTS TESTIMONIAL SLIDER AFTER 5s AFTER THE MOUNTING OF THE COMPONENT
-        setTimeout(this.avLoop(), 5000);
-
-    }
-
-}
-
-</script>
-
 <template>
     <main>
 
@@ -398,6 +319,88 @@ export default {
         </section>
     </main>
 </template>
+
+<script>
+
+import { store } from '../store';
+
+// IMPORT COMPONENTS
+import avBtn from './avBtn.vue';
+
+export default {
+    name: 'avMain',
+
+    data() {
+        return {
+            store,
+        }
+    },
+
+    // COMPONENTS DECLARATION
+    components: {
+        avBtn
+    },
+
+    methods: {
+
+        // CREATES OBJECT WITH CONTACT DETAILS THAT CAN BE HANDLED TO RECEIVE A BOOK REQUEST
+        avCreateRequest() {
+
+            this.store.bookRequest = [];
+
+            const newRequest = {
+                name: this.store.nameForm,
+                email: this.store.emailForm,
+                nummer: this.store.numberForm,
+                location: this.store.locationForm
+            }
+
+            this.store.bookRequest.push(newRequest);
+
+            console.log('FORM SENT', this.store.bookRequest);
+
+            this.store.nameForm = '';
+            this.store.emailForm = '';
+            this.store.numberForm = '';
+            this.store.locationForm = '';
+        },
+
+        // TRANSFORMS IMAGE PATH TO URL
+        getImg(url) {
+            return new URL(`${url}`, import.meta.url).href
+        },
+
+        // CHANGE DISPLAYED TESTIMONIAL ON BULLET DOT CLICK
+        changeActiveTestimonial(index) {
+            this.store.activeTestimonial = index;
+        },
+
+        // TESTIMONIALS SLIDER LOOP
+        avLoop() {
+
+            this.autoplay = setInterval(() => {
+
+                store.activeTestimonial++;
+                if (store.activeTestimonial > store.testimonials.length - 1) {
+                    store.activeTestimonial = 0;
+                }
+
+            }, 5000);
+
+        },
+
+    },
+
+    mounted() {
+
+        // STARTS TESTIMONIAL SLIDER AFTER 5s AFTER THE MOUNTING OF THE COMPONENT
+        setTimeout(this.avLoop(), 5000);
+
+    }
+
+}
+
+</script>
 
 <style lang="scss" scoped>
 @use '../assets/scss/partials/avMain.scss';

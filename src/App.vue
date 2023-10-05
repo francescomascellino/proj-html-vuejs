@@ -1,3 +1,11 @@
+<template>
+    <avHeader />
+
+    <avMain />
+
+    <avFooter :contacts="store.footerContacts" :courses="store.footerCourses" />
+</template>
+
 <script>
 
 // IMPORT GLOBAL STATE
@@ -30,14 +38,6 @@ export default {
 }
 
 </script>
-
-<template>
-    <avHeader />
-
-    <avMain />
-
-    <avFooter :contacts="store.footerContacts" :courses="store.footerCourses" />
-</template>
 
 <style lang="scss" scoped>
 @use './assets/scss/style.scss';

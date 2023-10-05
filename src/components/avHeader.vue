@@ -1,25 +1,3 @@
-<script>
-
-import { store } from '../store';
-
-import avNav from './avNav.vue';
-
-export default {
-    name: 'avHeader',
-
-    components: {
-        avNav
-    },
-
-    data() {
-        return {
-            store
-        }
-    }
-}
-
-</script>
-
 <template>
     <header>
         <div class="av-hero position-relative">
@@ -91,6 +69,30 @@ export default {
 
     </header>
 </template>
+
+<script>
+
+import { store } from '../store';
+
+// IMPORT COMPONENTS
+import avNav from './avNav.vue';
+
+export default {
+    name: 'avHeader',
+
+    // COMPONENTS DECLARATION
+    components: {
+        avNav
+    },
+
+    data() {
+        return {
+            store
+        }
+    }
+}
+
+</script>
 
 <style lang="scss" scoped>
 @use '../assets/scss/partials/avHeader.scss';
