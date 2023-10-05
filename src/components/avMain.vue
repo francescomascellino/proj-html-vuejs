@@ -232,11 +232,13 @@
                             <!-- IMAGE -->
                             <div class="py-4 av-testimonial">
                                 <img :src="getImg(store.testimonials[store.activeTestimonial].image)"
-                                    :alt="store.testimonials[store.activeTestimonial].name" class="av-appearing">
+                                    :alt="store.testimonials[store.activeTestimonial].name" class="av-appearing"
+                                    @mouseover="avStopAutoplay()" @mouseleave="avLoop()">
                             </div>
 
                             <!-- QUOTE -->
-                            <div class="d-flex align-items-center justify-content-center av-testQuote">
+                            <div class="d-flex align-items-center justify-content-center av-testQuote"
+                                @mouseover="avStopAutoplay()" @mouseleave="avLoop()">
                                 <p>{{ store.testimonials[store.activeTestimonial].quote }}</p>
                             </div>
 
@@ -403,6 +405,12 @@ export default {
             }, 5000);
 
         },
+
+        avStopAutoplay() {
+            console.log(this.autoplay);
+            clearInterval(this.autoplay)
+        }
+
 
     },
 
