@@ -82,11 +82,9 @@
 
                     </div>
 
-                    <div class="col-3">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, enim iure dolorem minus
-                            a,
-                            velit odio aspernatur quas quibusdam repudiandae aliquam? Veniam architecto neque earum
-                            perspiciatis quidem nobis culpa sint?</p>
+                    <div class="col-3 text-center av-offers">
+                        <img src="../assets/img/labels/adGrid.png" alt="ad" class="mb-4 av-adLabels">
+                        <avBtn><a href="#av-book">book now</a></avBtn>
                     </div>
 
                 </div>
@@ -94,6 +92,7 @@
             </div>
         </section>
 
+        <!-- LEGAL -->
         <section id="av-legal" class="av-ftrBottom">
 
             <div class="container">
@@ -128,9 +127,21 @@
 
 <script>
 
+import avBtn from './avBtn.vue';
+
 export default {
 
-    name: 'avFooter'
+    name: 'avFooter',
+
+    components: {
+        avBtn
+    },
+
+    methods: {
+        getImg(url) {
+            return new URL(`${url}`, import.meta.url).href
+        }
+    }
 
 }
 </script>
