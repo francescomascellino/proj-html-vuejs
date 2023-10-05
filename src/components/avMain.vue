@@ -83,10 +83,10 @@ export default {
 
             <div class="container mb-5">
 
-                <div class="row">
+                <div class="row row-cols-1 row-cols-md-1 row-cols-lg-2">
 
                     <!-- INFO SECTION -->
-                    <div class="col-6 d-flex flex-column justify-content-center my-5 av-introduction">
+                    <div class="col d-flex flex-column justify-content-center my-5 av-introduction">
                         <h2 class="text-capitalize mb-5">Get Behind The Wheel</h2>
 
                         <p class="mb-4 av-introInfo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
@@ -102,7 +102,7 @@ export default {
                     </div>
 
                     <!-- FORM -->
-                    <div class="col-6 av-bookForm">
+                    <div class="col av-bookForm">
 
                         <div class="card rounded-3 p-5 shadow text-center">
 

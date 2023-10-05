@@ -17,18 +17,13 @@ section#av-book {
     background-color: $av-light;
 
     .av-introduction {
-        h1 {
-            color: $av-dark;
-        }
 
         p.av-introInfo {
-            color: $av-txt-primary;
             font-size: 1.4rem;
             line-height: 2.8rem;
         }
 
         p {
-            color: $av-txt-primary;
             font-size: 1rem;
             line-height: 2rem;
         }
@@ -44,7 +39,6 @@ section#av-book {
         }
 
         p {
-            color: $av-txt-primary;
             font-size: 1.3rem;
             line-height: 2.6rem;
             font-weight: 600;
@@ -120,7 +114,6 @@ section#av-courses {
         padding: 3.5rem;
 
         p {
-            color: $av-txt-primary;
             margin: 2.5rem 0 !important;
             font-size: 1rem;
             line-height: 2rem;
@@ -159,7 +152,6 @@ section#av-rates {
         background-color: $av-light;
 
         p {
-            color: $av-txt-primary;
             font-size: 0.9em;
             font-weight: bold;
         }
@@ -174,8 +166,6 @@ section#av-rates {
 .av-rateCircle {
     width: 70%;
 }
-
-.av-perCircle {}
 
 .av-circleBg {
     fill: none;
@@ -214,7 +204,6 @@ section#av-instructors {
     }
 
     p {
-        color: $av-txt-primary;
         font-size: 1.4rem;
         line-height: 2.8rem;
     }
@@ -276,7 +265,6 @@ section#av-testimonials {
         margin: 0 auto;
 
         p {
-            color: $av-txt-primary;
             font-size: 1rem;
             line-height: 2rem;
         }
@@ -284,7 +272,6 @@ section#av-testimonials {
     }
 
     p {
-        color: $av-txt-primary;
         font-size: 1.2rem;
         line-height: 2.84em;
     }
@@ -350,10 +337,6 @@ section#av-blog {
                         }
                     }
 
-                    p {
-                        color: $av-txt-primary;
-                    }
-
                 }
             }
 
@@ -387,7 +370,6 @@ section#av-newsletter {
 
     p {
         font-size: .75rem;
-        color: $av-txt-primary
     }
 }
 

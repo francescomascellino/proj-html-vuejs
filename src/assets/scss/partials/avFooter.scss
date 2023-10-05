@@ -1,1 +1,22 @@
 @use '../variables.scss' as *;
+
+footer {
+
+    .container {
+        border: 1px solid red;
+    }
+
+    height: 580px;
+    background-image: url(../assets/img/pagination/footer-background-color.jpg);
+    background-position: center;
+    background-size: cover;
+
+    #av-contacts {
+        height: 100%;
+    }
+
+    #av-legal {
+        height: 140px;
+        background-color: $av-dark;
+    }
+}
