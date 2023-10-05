@@ -406,8 +406,8 @@ export default {
 
         },
 
+        // STOPS SLIDER
         avStopAutoplay() {
-            console.log(this.autoplay);
             clearInterval(this.autoplay)
         }
 
