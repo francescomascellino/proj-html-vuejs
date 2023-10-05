@@ -1,5 +1,7 @@
 <script>
 
+import { store } from '../store';
+
 import avNav from './avNav.vue';
 
 export default {
@@ -7,6 +9,12 @@ export default {
 
     components: {
         avNav
+    },
+
+    data() {
+        return {
+            store
+        }
     }
 }
 
@@ -36,7 +44,7 @@ export default {
             </div>
 
             <!-- NAVBAR -->
-            <avNav />
+            <avNav :navbar="store.navLinks" />
 
             <!-- TEXT CONTAINER -->
             <div class="container av-heroTxtCont">

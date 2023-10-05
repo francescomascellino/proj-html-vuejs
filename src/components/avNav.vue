@@ -20,7 +20,7 @@
 
                     <!-- NAVBAR LINKS -->
                     <a class="nav-link text-uppercase fw-bold" :class="(index == activeLink ? 'av-active' : '')"
-                        @click="turnActive(index)" :href="link.path" v-for="(link, index) in this.store.navLinks">
+                        @click="turnActive(index)" :href="link.path" v-for="(link, index) in navbar">
                         {{ link.text }} <span v-if="link.new" class="badge">New</span></a>
 
 
@@ -37,8 +37,6 @@
 
 <script>
 
-import { store } from '../store';
-
 import avBtn from './avBtn.vue';
 
 import { Dropdown } from 'bootstrap';
@@ -49,11 +47,16 @@ export default {
         avBtn
     },
 
+    // PROPS DECLARATION
+    props: {
+
+        navbar: "Object",
+
+    },
+
     data() {
         return {
             Dropdown,
-
-            store,
 
             activeLink: 0
 
