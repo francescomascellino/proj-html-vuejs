@@ -8,6 +8,7 @@
 
                 <div class="row align-items-start justify-content-between">
 
+                    <!-- AVADA PROMISE -->
                     <div class="col-3">
                         <img src="../assets/img/logos/avada-drivers-logo-1x.png" alt="Avada Driving School"
                             class="mb-3 av-ftrLogo">
@@ -17,6 +18,7 @@
 
                     </div>
 
+                    <!-- CONTACTS -->
                     <div class="col-2 p-0">
 
                         <h5 class="mb-3">CONTACT DETAILS</h5>
@@ -40,6 +42,7 @@
 
                     </div>
 
+                    <!-- COURSES -->
                     <div class="col-2 p-0">
                         <h5 class="mb-3">COURSES</h5>
 
@@ -56,6 +59,7 @@
 
                     </div>
 
+                    <!-- OFFERS -->
                     <div class="col-3 text-center av-offers">
 
                         <a href="#av-rates">
@@ -75,6 +79,7 @@
 
             <div class="container">
 
+                <!-- COPYRIGHT -->
                 <div class="row align-items-center">
                     <div class="col d-flex flex-row justify-content-between">
                         <p>© Copyright 2012 - 2023 | Avada Theme by <a href="#">ThemeFusion</a> | All Rights Reserved |
@@ -82,6 +87,7 @@
                             <a href="#">WordPress</a> WordPress
                         </p>
 
+                        <!-- SOCIAL ICONS -->
                         <div class="av-ftrSocial">
                             <a class="px-2" href=""><i class="fa-brands fa-facebook-f"></i></a>
 

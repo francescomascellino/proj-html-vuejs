@@ -18,6 +18,8 @@ export default {
     },
 
     methods: {
+
+        // CREATES OBJECT WITH CONTACT DETAILS THAT CAN BE HANDLED TO RECEIVE A BOOK REQUEST
         avCreateRequest() {
 
             this.store.bookRequest = [];
@@ -39,7 +41,7 @@ export default {
             this.store.locationForm = '';
         },
 
-        // TRASFORMA IL PERCORSO DELL'IMMAGINE LOCALE IN UN URL
+        // TRANSFORMS IMAGE PATH TO URL
         getImg(url) {
             return new URL(`${url}`, import.meta.url).href
         },
@@ -48,7 +50,7 @@ export default {
             this.store.activeTestimonial = index;
         },
 
-        // LOOP DEI TESTIMONIALS
+        // TESTIMONIALS SLIDER LOOP
         avLoop() {
 
             this.autoplay = setInterval(() => {
@@ -66,7 +68,7 @@ export default {
 
     mounted() {
 
-        // ROTAZIONE DEI TESTIMONIALS DOPO 3 SECONDI
+        // STARTS TESTIMONIAL SLIDER AFTER 5s AFTER THE MOUNTING OF THE COMPONENT
         setTimeout(this.avLoop(), 5000);
 
     }
@@ -101,7 +103,7 @@ export default {
                             vero architecto nihil quam odit omnis, itaque, provident officiis porro doloribus et. Autem?</p>
                     </div>
 
-                    <!-- FORM -->
+                    <!-- BOOKING FORM -->
                     <div class="col av-bookForm">
 
                         <div class="card rounded-3 p-5 shadow text-center">
@@ -201,19 +203,20 @@ export default {
                 <div class="row justify-content-center">
                     <div class="col-4" v-for="percentage in this.store.percentages">
 
-                        <!-- CARD "POSTERIORE" VERDE -->
+                        <!-- GREEN 'BACK' CARD -->
                         <div class="rounded-3 av-cardContainer shadow">
 
                             <!-- CARD -->
                             <div class="d-flex flex-column align-items-center rounded-3 py-4 av-rateCard">
 
-                                <!-- CERCHIO PERCENTUALE -->
+                                <!-- PERCENTAGE CIRCLE -->
                                 <div class="av-rateCircle">
 
                                     <svg viewBox="0 0 36 36" class="av-perCircle">
                                         <path class="av-circleBg"
                                             d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                                        <!-- stroke-dasharray = PERCENTUALE - strke = COLORE -->
+
+                                        <!-- stroke-dasharray = PERCENTAGE - strke = COLOR -->
                                         <path class="av-circleBorder" :stroke-dasharray="`${percentage.rate}, 100`"
                                             d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
                                             stroke="#7abc64" />
@@ -255,7 +258,7 @@ export default {
                     <!-- INSTRUCTORS CARDS -->
                     <div class="col-4" v-for="Instructor in store.instructors">
 
-                        <!-- CARD "POSTERIORE" VERDE -->
+                        <!-- GREEN 'BACK' CARD -->
                         <div class="rounded-3 av-cardContainer shadow">
 
                             <!-- CARD -->
@@ -292,6 +295,7 @@ export default {
         <section id="av-testimonials">
             <div class="container">
                 <div class="row align-items-center">
+
                     <div class="col text-center av-testSlider">
 
                         <h2>Testimonials</h2>
@@ -299,23 +303,29 @@ export default {
 
                         <div class="av-testPagination">
 
+                            <!-- IMAGE -->
                             <div class="py-4 av-testimonial">
                                 <img :src="getImg(store.testimonials[store.activeTestimonial].image)"
                                     :alt="store.testimonials[store.activeTestimonial].name" class="av-appearing">
                             </div>
 
+                            <!-- QUOTE -->
                             <div class="d-flex align-items-center justify-content-center av-testQuote">
                                 <p>{{ store.testimonials[store.activeTestimonial].quote }}</p>
                             </div>
 
-
+                            <!-- NAME -->
                             <p class="fw-bold">{{ store.testimonials[store.activeTestimonial].name }}</p>
 
+                            <!-- BULLETS WITH TESTIMONIAL CHANGE ON CLICK -->
                             <i v-for="( testimonial, index ) in  store.testimonials " :id="index" class="px-2"
                                 :class="index == this.store.activeTestimonial ? 'fa-solid fa-circle' : 'fa-regular fa-circle'"
                                 @click="changeActiveTestimonial(index)"></i>
+
                         </div>
+
                     </div>
+
                 </div>
             </div>
         </section>
@@ -331,6 +341,7 @@ export default {
                             <div class="rounded-2 text-center av-news">
                                 <h2>Latest News</h2>
 
+                                <!-- BLOG POSTS -->
                                 <div class="av-postContainer d-flex flex-row mt-5">
                                     <div class="av-post" v-for="post in store.blogNews">
 

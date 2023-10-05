@@ -1,7 +1,9 @@
 <script>
 
+// IMPORT GLOBAL STATE
 import { store } from './store.js';
 
+// IMPORT COMPONENTS
 import avHeader from './components/avHeader.vue';
 
 import avMain from './components/avMain.vue';
@@ -10,6 +12,7 @@ import avFooter from './components/avFooter.vue';
 
 export default {
 
+    // COMPONENTS DECLARATION
     components: {
         avHeader,
         avMain,

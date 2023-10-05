@@ -1,4 +1,5 @@
 <template>
+    <!-- BUTTON TEMPLATE. SLOT CAN BE COMPLETED WITH AN ANCHOR TAG. ANCHOR TAG NEEDS A TEXT COLOR -->
     <button class="btn rounded-5 av-btn">
 
         <slot></slot>

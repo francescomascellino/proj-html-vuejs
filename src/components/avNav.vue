@@ -18,6 +18,7 @@
 
                 <div class="navbar-nav flex-wrap justify-content-end">
 
+                    <!-- NAVBAR LINKS -->
                     <a class="nav-link text-uppercase fw-bold" :class="(index == activeLink ? 'av-active' : '')"
                         @click="turnActive(index)" :href="link.path" v-for="(link, index) in this.store.navLinks">
                         {{ link.text }} <span v-if="link.new" class="badge">New</span></a>
@@ -61,7 +62,7 @@ export default {
 
     methods: {
         turnActive(index) {
-            // ASSEGNA AD "activeLink" IL VALORE DI "index", TRIGGERANDO IL CAMBIO DI CLASSE
+            // ASSIGNS TO "activeLink" THE "index" VALUE, TRIGGERING THE CLASS CHANGE
             this.activeLink = index;
         },
     }

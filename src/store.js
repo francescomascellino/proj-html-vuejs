@@ -2,6 +2,7 @@ import { reactive } from "vue";
 
 export const store = reactive({
 
+    // NAVBAR LINKS
     navLinks: [
         {
             text: 'home',
@@ -40,6 +41,7 @@ export const store = reactive({
         },
     ],
 
+    // BOOKING FORM
     nameForm: '',
 
     emailForm: '',
@@ -50,6 +52,7 @@ export const store = reactive({
 
     bookRequest: [],
 
+    // OBJECTS FOR LIST RENDERING
     courses: [
         {
             name: 'Pass Plus',
